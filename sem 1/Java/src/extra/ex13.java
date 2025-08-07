@@ -4,22 +4,22 @@ public class ex13 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
-    int revers = 0;
+    int temp = 0;
 
     System.out.print("enter number : ");
     int number = sc.nextInt();
-    int palindrome = number;
+    int armstrong = number;
 
     while (number > 0) {
       int n = number % 10;
-      revers = revers * 10 + n;
+      temp += n * n * n;
       number = number / 10;
     }
 
-    if (palindrome == revers) {
-      System.out.println(palindrome + " is palindrome");
+    if (armstrong == temp) {
+      System.out.println(armstrong + " is armstrong");
     } else {
-      System.out.println(palindrome + " is not palindrome");
+      System.out.println(armstrong + " is not armstrong");
     }
 
     sc.close();
