@@ -81,6 +81,5 @@ CREATE TABLE maintenance (
     description VARCHAR2(100),
     cost NUMBER(8,2) CHECK (cost >= 0),
     performed_by VARCHAR2(50),
-    PRIMARY KEY (bus_id, maintenance_id),
     FOREIGN KEY (bus_id) REFERENCES bus(bus_id) ON DELETE CASCADE
 );
